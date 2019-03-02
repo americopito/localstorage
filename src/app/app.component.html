@@ -1,0 +1,30 @@
+<html>
+
+<body>
+ <div class="container">
+    
+    <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input  [ngModelOptions]="{standalone: true}" id ="n" [(ngModel)]="add.name" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          
+        </div>
+        <button  (click)="setValue()"  class="btn btn-primary">Submit</button>
+      </form>
+     <br>
+      <div class="card" style="width: 18rem;">
+        
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" *ngFor="let l of list2">{{l}} 
+              <button  (click)="edit(l)" type="button" style="float:right" class="btn btn-primary btn-sm"> <input type="text" [(ngModel)]="add.ed" *ngIf="t" >
+              ed   <button (click)="edit2(l,add.ed)" type="button" *ngIf="t" style="float:right" class="btn btn-primary btn-sm">hsh</button> </button>
+            <button  (click)="delete(l)" type="button" style="float:right" class="btn btn-primary btn-sm">del</button></li>
+         
+        </ul>
+      </div>
+
+ </div>
+    
+</body>
+
+</html>
